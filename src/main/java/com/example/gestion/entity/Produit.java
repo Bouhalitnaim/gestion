@@ -11,7 +11,7 @@ public class Produit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String ref;
+    private String refer;
     private int quantite;
     private float prixUnitaire;
 
@@ -20,19 +20,19 @@ public class Produit {
         super();
     }
 
-    public Produit(String ref, int quantite, float prixUnitaire) {
+    public Produit(String refer, int quantite, float prixUnitaire) {
         super();
-        this.ref = ref;
+        this.refer = refer;
         this.quantite = quantite;
         this.prixUnitaire = prixUnitaire;
     }
 
-    public String getRef() {
-        return ref;
+    public String getrefer() {
+        return refer;
     }
 
-    public void setRef(String ref) {
-        this.ref = ref;
+    public void setrefer(String refer) {
+        this.refer = refer;
     }
 
     public int getQuantite() {
