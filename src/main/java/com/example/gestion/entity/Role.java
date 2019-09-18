@@ -1,5 +1,7 @@
 package com.example.gestion.entity;
 
+import com.example.gestion.util.RoleEnum;
+
 import javax.persistence.*;
 
 @Entity
@@ -16,8 +18,9 @@ public class Role {
         super();
     }
 
-    public Role(String name) {
-        this.name = name;
+    public Role(RoleEnum role) {
+        super();
+        this.name = role.getName();
     }
 
     public Long getId() {

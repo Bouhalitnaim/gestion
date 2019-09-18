@@ -6,6 +6,7 @@ import com.example.gestion.entity.User;
 import com.example.gestion.repository.ProduitRepository;
 import com.example.gestion.repository.RoleRepository;
 import com.example.gestion.repository.UserRepository;
+import com.example.gestion.util.RoleEnum;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -27,8 +28,8 @@ public class GestionStockProduitsApplication {
 
         RoleRepository roleRepository = ctx.getBean(RoleRepository.class);
 
-        Role roleUser = new Role("ROLE_USER");
-        Role roleAdmin = new Role("ROLE_ADMIN");
+        Role roleUser = new Role(RoleEnum.ROLE_USER);
+        Role roleAdmin = new Role(RoleEnum.ROLE_ADMIN);
 
         roleRepository.save(roleUser);
         roleRepository.save(roleAdmin);
